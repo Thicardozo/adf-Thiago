@@ -1,0 +1,9 @@
+{
+	"name": "adf-massificados-Thiago",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d396e7f8-b5c5-489f-8d9b-2cd0fb84ff53",
+		"tenantId": "0133c028-1523-493c-9ced-ba0cbab9138d"
+	}
+}
