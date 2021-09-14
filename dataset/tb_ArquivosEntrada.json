@@ -1,0 +1,37 @@
+{
+	"name": "tb_ArquivosEntrada",
+	"properties": {
+		"description": "Conexão com a tabela stg.ArquivosEntrada",
+		"linkedServiceName": {
+			"referenceName": "bd_sqlserver_massificados",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "txtDados",
+				"type": "char"
+			},
+			{
+				"name": "nomArquivo",
+				"type": "varchar"
+			},
+			{
+				"name": "codProduto",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "dthCadastro",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "stg",
+			"table": "ArquivosEntrada"
+		}
+	}
+}
