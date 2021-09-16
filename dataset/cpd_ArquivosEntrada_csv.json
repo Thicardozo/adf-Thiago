@@ -18,7 +18,7 @@
 				"folderPath": "ArquivosEntrada",
 				"fileSystem": "adf"
 			},
-			"columnDelimiter": ";",
+			"columnDelimiter": "|",
 			"escapeChar": "\\",
 			"quoteChar": ""
 		},
