@@ -87,6 +87,15 @@
 								"enableStaging": false,
 								"translator": {
 									"type": "TabularTranslator",
+									"mappings": [
+										{
+											"sink": {
+												"name": "txtDados",
+												"physicalType": "char"
+											}
+										},
+										null
+									],
 									"typeConversion": true,
 									"typeConversionSettings": {
 										"allowDataTruncation": true,
