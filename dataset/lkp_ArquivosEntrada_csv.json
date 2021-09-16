@@ -1,5 +1,5 @@
 {
-	"name": "ArquivosEntrada_csv",
+	"name": "lkp_ArquivosEntrada_csv",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_StorageArquivos",
