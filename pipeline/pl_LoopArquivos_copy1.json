@@ -18,7 +18,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata1').output.value",
+						"value": "@activity('Get Metadata1').output.name",
 						"type": "Expression"
 					},
 					"isSequential": false,
