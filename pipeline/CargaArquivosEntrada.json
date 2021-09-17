@@ -1,5 +1,5 @@
 {
-	"name": "pl_LoopArquivos_copy1",
+	"name": "CargaArquivosEntrada",
 	"properties": {
 		"description": "Pipeline responsável por ler todos os arquivos disponíveis para carga e inserir na tabela inicial da Stage.",
 		"activities": [
