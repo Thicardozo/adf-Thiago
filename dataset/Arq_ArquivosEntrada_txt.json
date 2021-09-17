@@ -1,5 +1,5 @@
 {
-	"name": "Lkp_ArquivosEntrada_txt",
+	"name": "Arq_ArquivosEntrada_txt",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_StorageArquivos",
