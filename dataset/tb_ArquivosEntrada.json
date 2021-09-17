@@ -11,7 +11,7 @@
 		"schema": [
 			{
 				"name": "txtDados",
-				"type": "varchar"
+				"type": "text"
 			},
 			{
 				"name": "nomArquivo",
