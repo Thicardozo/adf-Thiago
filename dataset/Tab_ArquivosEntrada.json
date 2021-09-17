@@ -1,5 +1,5 @@
 {
-	"name": "tb_ArquivosEntrada",
+	"name": "Tab_ArquivosEntrada",
 	"properties": {
 		"description": "Conexão com a tabela stg.ArquivosEntrada",
 		"linkedServiceName": {

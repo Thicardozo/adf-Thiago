@@ -18,7 +18,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "Lkp_ArquivosEntrada_txt",
+						"referenceName": "Arq_ArquivosEntrada_txt",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -127,13 +127,13 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "Lkp_ArquivosEntrada_txt",
+									"referenceName": "Arq_ArquivosEntrada_txt",
 									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
 								{
-									"referenceName": "tb_ArquivosEntrada",
+									"referenceName": "Tab_ArquivosEntrada",
 									"type": "DatasetReference"
 								}
 							]
