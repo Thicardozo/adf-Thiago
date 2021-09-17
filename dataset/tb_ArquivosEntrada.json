@@ -11,22 +11,11 @@
 		"schema": [
 			{
 				"name": "txtDados",
-				"type": "char"
+				"type": "nvarchar"
 			},
 			{
 				"name": "nomArquivo",
 				"type": "varchar"
-			},
-			{
-				"name": "codProduto",
-				"type": "smallint",
-				"precision": 5
-			},
-			{
-				"name": "dthCadastro",
-				"type": "datetime",
-				"precision": 23,
-				"scale": 3
 			}
 		],
 		"typeProperties": {
