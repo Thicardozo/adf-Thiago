@@ -101,7 +101,7 @@
 											"sink": {
 												"name": "txtDados",
 												"type": "String",
-												"physicalType": "varchar"
+												"physicalType": "text"
 											}
 										},
 										{
