@@ -1,0 +1,27 @@
+{
+	"name": "AddMaps",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_StorageArquivos",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "000000004_0005_02_000001_20210908__Protecao_Financeira_CasaOliveira.txt",
+				"folderPath": "ArquivosEntrada",
+				"fileSystem": "adf"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"quoteChar": ""
+		},
+		"schema": [
+			{
+				"type": "String"
+			}
+		]
+	}
+}
