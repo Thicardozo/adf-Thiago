@@ -90,7 +90,8 @@
 									}
 								},
 								"sink": {
-									"type": "SqlServerSink"
+									"type": "SqlServerSink",
+									"preCopyScript": "TRUNCATE TABLE stg.ArquivosEntrada;"
 								},
 								"enableStaging": false,
 								"translator": {
