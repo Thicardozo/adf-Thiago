@@ -140,7 +140,8 @@
 				}
 			},
 			{
-				"name": "Stored procedure1",
+				"name": "CargaStage",
+				"description": "Procedure responsável pela carga de dados na Stage.",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
