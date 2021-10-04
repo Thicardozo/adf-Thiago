@@ -1,0 +1,23 @@
+{
+	"name": "Arq_ArquivosEntrada_txt_copy1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_StorageArquivos",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "ArquivosSaida",
+				"fileSystem": "adf"
+			},
+			"columnDelimiter": "",
+			"encodingName": "WINDOWS-1252",
+			"escapeChar": "\\",
+			"quoteChar": ""
+		},
+		"schema": []
+	}
+}
