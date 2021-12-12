@@ -36,6 +36,248 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Cod. da Loja",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "Cod. da Loja",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Desc. Da Loja",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Desc. Da Loja",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CNPJ Representante",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "CNPJ Representante",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Nome Representante Seguro",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Nome Representante Seguro",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CPF Segurado",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "CPF Segurado",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Nome Segurado",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Nome Segurado",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Data da Venda",
+									"type": "DateTime",
+									"physicalType": "date"
+								},
+								"sink": {
+									"name": "Data da Venda",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Nº Nota Fiscal",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "Nº Nota Fiscal",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Data Nota Fiscal",
+									"type": "DateTime",
+									"physicalType": "date"
+								},
+								"sink": {
+									"name": "Data Nota Fiscal",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Nº Bilhete de Seguros",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Nº Bilhete de Seguros",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Marca Pneu",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Marca Pneu",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Modelo Pneu",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Modelo Pneu",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Medida Pneu",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Medida Pneu",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Número de Serie",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Número de Serie",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Aro",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Aro",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Qtde Itens",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "Qtde Itens",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Descrição",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "Descrição",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Premio Unitário",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "Premio Unitário",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Premio de emissão",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "Premio de emissão",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Imp. Segurada - (Valor NF)",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
+								"sink": {
+									"name": "Imp. Segurada - (Valor NF)",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
