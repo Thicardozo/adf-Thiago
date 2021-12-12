@@ -1,0 +1,22 @@
+{
+	"name": "GerarArquivoFaturamentoMapfre",
+	"properties": {
+		"description": "Pipeline responsável pela geração do arquivo de faturamento Mapfre.",
+		"activities": [
+			{
+				"name": "Stored procedure1",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
+			}
+		],
+		"annotations": []
+	}
+}

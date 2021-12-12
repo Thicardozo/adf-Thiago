@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "LeituraArquivos",
 	"properties": {
 		"description": "Listar arquivos disponibilizados no diretório de entrada.",
 		"activities": [
@@ -26,6 +26,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -78,7 +79,10 @@
 										"type": "AzureBlobFSReadSettings",
 										"recursive": true,
 										"wildcardFolderPath": "ArquivosEntrada",
-										"wildcardFileName": "@item().name",
+										"wildcardFileName": {
+											"value": "@item().name",
+											"type": "Expression"
+										},
 										"enablePartitionDiscovery": false
 									},
 									"formatSettings": {
