@@ -4,8 +4,8 @@
 		"description": "Pipeline responsável pela geração do arquivo de faturamento Mapfre.",
 		"activities": [
 			{
-				"name": "Stored procedure1",
-				"type": "SqlServerStoredProcedure",
+				"name": "Copy data1",
+				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -14,7 +14,47 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"sqlReaderQuery": "SELECT \nDISTINCT \nt1.id,\n T7.codFilial as \"Cod. da Loja\" /* idFilial - codFilial EmpresaFilial*/\n,T7.txtNomeFilial as \"Desc. Da Loja\" /* txtNomeFilial */\n,REPLICATE ('0',14 - LEN(T8.numCnpj)) + CAST(T8.numCnpj AS VARCHAR) AS \"CNPJ Representante\" /* cnpj empresa varegista crp.Empresa cb motors */\n,T12.txtNomeEmpresa as \"Nome Representante Seguro\" /* nome empresa varegista - crp.Empresa*/\n,REPLICATE ('0',11 - LEN(T2.numCpf)) + CAST(T2.numCpf AS VARCHAR) AS \"CPF Segurado\"\n,UPPER(T2.txtNomePessoa) as \"Nome Segurado\"\n,CONVERT(DATE, T1.dthVenda) as \"Data da Venda\"\n,Null as \"Nº Nota Fiscal\"\n,T1.dthNotaFiscal as \"Data Nota Fiscal\"\n,T1.numProposta as \"Nº Bilhete de Seguros\"\n,T10.txtNomeMarca as \"Marca Pneu\"\n,T5.txtNomeMercadoria as \"Modelo Pneu\"\n,T5.txtNomeMercadoria as \"Medida Pneu\"\n,T5.numSerie as \"Número de Serie\"\n,T5.txtNomeMercadoria as \"Aro\"\n,T11.QtdMercadoria as \"Qtde Itens\"\n,T5.txtNomeMercadoria as \"Descrição\"\n,FORMAT(T1.vlrPremioTotal / IsNull(T11.QtdMercadoria,0), 'N', 'pt-br') as \"Premio Unitário\"\n,FORMAT(T1.vlrPremioTotal, 'N', 'pt-br')  as \"Premio de emissão\" -- vlr premio total tb proposta\n,FORMAT(T5.vlrMercadoria *  IsNull(T11.QtdMercadoria,0), 'N', 'pt-br') as \"Imp. Segurada - (Valor NF)\" -- vlr propostaa\nFROM neg.Proposta T1 \nINNER JOIN crp.PessoaFisica T2 ON (T1.idPessoaFisica = T2.idPessoaFisica)\nINNER JOIN neg.Produto T3 ON (T1.idProduto = T3.Id)\nINNER JOIN neg.PropostaMercadoria T4 ON (T1.id = T4.idProposta)\nINNER JOIN neg.Mercadoria T5 ON (T4.idMercadoria = T5.id)\nINNER JOIN neg.LinhaMercadoria T6 ON (T4.idLinhaMercadoria = T6.id And UPPER(txtLinhaMercadoria) LIKE '%PNEU%')\nINNER JOIN crp.EmpresaFilial T7 ON (T1.idPessoaFilial = T7.idPessoaFilial)\nINNER JOIN crp.PessoaJuridica T8 ON (T7.idPessoaFilial = T8.idPessoaJuridica)\nINNER JOIN neg.LinhaMarcaMercadoria T9 ON (T6.id = T9.idLinhaMercadoria)\nINNER JOIN neg.MarcaMercadoria T10 ON (T9.idMarcaMercadoria = T10.id)\nINNER JOIN (SELECT count(1) as QtdMercadoria, a.id FROM neg.Proposta a INNER JOIN neg.PropostaMercadoria b ON (a.id = b.idProposta) GROUP BY a.id) T11 ON (T1.id = T11.id)\nINNER JOIN crp.Empresa T12 ON (T1.idPessoaEmpresa = T12.idPessoaEmpresa)\nWHERE T1.idPessoaSeguradora = 14",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Tab_ArquivosEntrada",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ArqFaturamentoPneuMapfre",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"annotations": []

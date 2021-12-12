@@ -1,0 +1,23 @@
+{
+	"name": "ArqFaturamentoPneuMapfre",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "bs_ArquivosEntrada",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "ArquivosSaida",
+				"container": "adf"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
