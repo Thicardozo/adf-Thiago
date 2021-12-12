@@ -1,0 +1,12 @@
+{
+	"name": "ConsultaFaturamentoPneuMapfre",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "bd_sqlserver_massificados",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
