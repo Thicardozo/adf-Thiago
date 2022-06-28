@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "Faturamento_MAPFRE.txt",
+				"fileName": "Faturamento_MAPFRE.csv",
 				"folderPath": "ArquivosSaida",
 				"container": "adf"
 			},
