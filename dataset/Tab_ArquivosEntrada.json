@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "Conexão com a tabela stg.ArquivosEntrada",
 		"linkedServiceName": {
-			"referenceName": "bd_sqlserver_massificados",
+			"referenceName": "bd_sqlserver_massificados_QA",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
